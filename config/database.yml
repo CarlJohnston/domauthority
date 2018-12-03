@@ -17,6 +17,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV.fetch("DOMAUTHORITY_DB_URL_PRODUCTION") { "localhost" } %>
   database: <%= ENV["DOMAUTHORITY_DB_NAME_PRODUCTION"] %>
   username: <%= ENV["DOMAUTHORITY_DB_USERNAME_PRODUCTION"] %>
   password: <%= ENV["DOMAUTHORITY_DB_PASSWORD_PRODUCTION"] %>
